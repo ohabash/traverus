@@ -1,0 +1,61 @@
+  <div class="container">
+    <div class="header-left">
+      <a href="/" class="header-item" href="/">
+          <img src="https://pmcdeadline2.files.wordpress.com/2016/07/logo-tv-logo.png">
+      </a>
+    </div>
+    <span id="header-toggle" class="header-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="header-menu" class="header-right header-menu">
+      <span class="header-item">
+        <a href="#home_2" data-scroll>about</a>
+      </span>
+      <span class="header-item">
+        <a href="#home_4" data-scroll>rebalance</a>
+      </span>
+      <span class="header-item">
+        <a href="#home_6" data-scroll>recharge</a>
+      </span>
+      
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+	// Header
+	var $toggle = $('#header-toggle');
+	var $menu = $('#header-menu');
+
+	$toggle.click(function() {
+		$(this).toggleClass('is-active');
+		$menu.toggleClass('is-active');
+	});
+
+	$('.modal-button').click(function() {
+		var target = $(this).data('target');
+		$('html').addClass('has-modal-open');
+		$(target).addClass('is-active');
+	});
+
+	$('.modal-background, .modal-close').click(function() {
+		$('html').removeClass('has-modal-open');
+		$(this).parent().removeClass('is-active');
+	});
+
+	var $highlights = $('.highlight');
+
+	$highlights.each(function() {
+		var $copy = '<button class="copy">Copy</button>';
+		$(this).append($copy);
+	});
+
+	new Clipboard('.copy', {
+		target: function(trigger) {
+		  return trigger.previousSibling;
+		}
+	});
+</script>

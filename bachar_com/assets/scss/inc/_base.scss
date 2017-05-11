@@ -1,0 +1,398 @@
+html{
+  background: #fff;
+}
+
+p{
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding-bottom: 1.2em;
+    letter-spacing: 0;
+  }
+
+body {
+  @extend .opens;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dot{
+   list-style: disc outside none;
+}
+
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+h2{
+  font-size: 3.4em;
+  color: $blue;
+  line-height: 1.3em;
+  padding-bottom: 0.5em;
+  @include bp(L-phone){
+    font-size: 3em;
+    padding-right: 1em;
+  }
+}
+
+h3 {
+    border: 1px solid #fff;
+    border-radius: 2em;
+    padding: 0.8em;
+    padding-left: 1.2em;
+    font-size: 1em;
+    margin: 2em;
+    text-transform: capitalize;
+    margin-left: 1.2em;
+}
+
+p.f{
+	text-transform: uppercase;
+	@extend .opens;
+	letter-spacing: 0.2em;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+a.to_top {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 5em;
+    opacity: 0.2;
+    padding: 50px;
+    padding-bottom: 0;
+    &:hover{
+      opacity: 0.8;
+    }
+}
+
+
+// .tm{
+//   position: relative;
+//   &:after {
+//     content:"TM";
+//     font-weight: 600;
+//     font-size: 0.5em;
+//   }
+// }
+
+
+
+
+
+hr {
+  height: 2em;
+  padding: 0 !important;
+  margin: 0;
+  border: #333;
+  &.bl{
+    background: url(../../img/hr_bl.png);
+    background-size: cover;
+  }
+  &.og {
+    background: url(../../img/hr_og.png);
+    background-size: cover;
+  }
+}
+
+
+
+#home {
+  section {
+    padding: 3em;
+    @include bp(L-phone){
+      padding: 1em;
+    }
+  }
+  section.home_1 {
+    .column {
+      padding: 0 !important;
+      margin: 3em 0;
+      .column-contain {
+        position: relative;
+        margin: 1em;
+        img {
+          margin: 0 auto;
+        }
+        p.f {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 0.8em 1em;
+          color: #fff;
+          font-weight: 600;
+          font-size: 1.5em;
+          @include ease(0.2s);
+        }
+        &#column_1 { 
+          background: $orange;
+          text-shadow: 1px 1px 1px darken($orange, 0%);
+        }
+        &#column_2 { 
+          background: $purple;
+          text-shadow: 1px 1px 1px darken($purple, 0%);
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  section.home_2{
+    .column.blue-bg {
+      border-left: 5em solid darken($purple, 5%);
+      position: relative;
+           transform: skew(-10deg);
+   -webkit-transform: skew(-10deg);
+      -moz-transform: skew(-10deg);
+        -o-transform: skew(-10deg);
+      width: 120%;
+      margin-left: -10%;
+      padding: 5em 2em !important;
+      p.slant{
+        padding-right: 65%;
+        // text-align: justify;
+        color: #fff;
+        font-size: 1.5em;
+        padding-top: 1em;
+      }
+      strong{color:#fff;}
+      @include bp(L-phone){
+        transform: skew(0);
+        -webkit-transform: skew(0);
+        -moz-transform: skew(0);
+        -o-transform: skew(0);
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: 0 !important;
+        border-left: 2em solid darken($purple, 5%);
+        p{
+          padding-right: 0 !important;
+        }
+      }
+    }
+    .column{
+      max-height: 100%;
+      overflow: hidden;
+      .img{
+        @include parrallax('http://i.huffpost.com/gen/1823961/images/o-JOGGING-facebook.jpg');
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+section.home_3 {
+    margin-top: -0.8em;
+}
+
+
+section.layout-b {
+  height: 41em;
+  // margin-bottom: 0.5em;
+  .lay-contain{
+    height: 100%;
+    &.sec_3_contain{
+      @include parrallax('https://i0.wp.com/www.basketballismypassion.com/wp-content/uploads/2014/03/The-importance-of-Stretching.jpg?fit=2716%2C1810');
+    }
+    &.sec_5_contain{
+      @include parrallax('https://cdn.spafinder.com/2015/08/25140712/The-Importance-of-Stretching.jpg');
+    }
+  }
+    h2{
+      text-align: right;
+      // padding-right: 2em;
+      padding-top: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+section.home_4{
+  padding: 4em !important;
+  .container{
+    p{
+      text-align: justify;
+      padding-right: 2em;
+    }
+  }
+  // margin-bottom: 0.5em;
+  .br{
+    border-right: 2px solid $blue;
+  }
+  .imgy{
+    img{
+      margin: 0 auto;
+    }
+  }
+  h2{
+    padding-bottom: 0.3em;
+  }
+  img.leaf{
+    // margin: 0 auto;
+    margin-left: 2em;
+    margin-top: -2.3em;
+    max-width: 6em;
+  }
+  ul.dot{
+    padding-left: 2em;
+    li{
+      padding-bottom: 0.5em;
+      color: #fff;
+      letter-spacing: 0;
+    }
+  }
+}
+
+
+
+.home_6{
+  padding: 5em 0 !important;
+  h2{
+    color: #fff;
+  }
+  img{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+  p{
+    text-align: justify;
+  }
+  @include bp(L-phone){
+    padding: 1em !important;
+  }
+}
+
+
+footer {
+  padding: 6em 0em !important;
+  ul.dott{
+    text-align: right;
+    padding-top: 1em;
+    color: #fff;
+    margin-top: -1.5em;
+    a{
+      &:hover{
+        color: #fff !important;
+      }
+    }
+    li {
+      &:after{
+        content: "\00B7";
+        font-size: 2.5em;
+        top: 7px;
+        position: relative;
+        padding-left: 0.2em;
+      }
+      &:last-child:after{
+        display: none !important;
+      }
+      @include bp(L-phone){
+        display: block !important;
+        text-align: center;
+        a{
+          color: #fff;
+          padding-bottom: 1em;
+          display: block;
+        }
+        &:after{
+          display: none !important;
+        }
+      }
+    }
+  }
+  .logo{
+    @include bp(L-phone){
+      text-align: center;
+    }
+    img{
+      max-width: 25%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.fine-text{
+  font-size: 0.7em !important;
+  opacity: 0.65;
+  font-style: italic;
+  text-align: left !important;
+}
+
+// apple
+.js-apple-glare{
+   //  -webkit-transition: all 0.5s ease-in-out;
+   // -moz-transition: all 0.5s ease-in-out;
+   //   -o-transition: all 0.5s ease-in-out;
+   //  -ms-transition: all 0.5s ease-in-out;
+   //      transition: all 0.5s ease-in-out;
+        // z-index: 1;
+}
+
+.item-apple{
+    transform-style: preserve-3d !important;
+    &.x{
+      &#column_1 p.f{
+        text-shadow: 10px 17px 44px darken($orange, 25%) !important;
+      }
+      &#column_2 p.f{
+        text-shadow: 10px 17px 44px darken($purple, 25%) !important;
+      }
+    }
+  }
+  .apple-inner{
+    transform: translateZ(20px) !important;
+    -webkit-transform: translateZ(20px)!important;
+    transform: translateZ(20px)!important;
+    // z-index: 2;
+    // position: relative;
+  }
+
+
+
+
+
+.footer a:not(.icon) {
+    border-bottom: 0;
+}

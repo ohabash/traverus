@@ -1,0 +1,499 @@
+strong{
+  color: inherit;
+}
+
+html{
+  background: #fff;
+}
+
+p{
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding-bottom: 1.2em;
+    letter-spacing: 0;
+  }
+
+body {
+  @extend .opens;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dot{
+   list-style: disc outside none;
+}
+
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+h2{
+  font-size: 4.3em;
+  color: rgba(#000, 0.3);
+  text-align: center;
+  padding-bottom: 1.2em;
+  @extend .didot;
+  @include bp(L-phone){
+    font-size: 3.3em;
+  }
+}
+
+h3{
+  font-size: 3em;
+  color: $blue;
+  text-align: left;
+  @extend .didot;
+  @include bp(L-phone){
+  }
+}
+
+h4{
+  font-size: 4em;
+  text-transform: lowercase;
+  font-weight: 100;
+  color: $green;
+  @extend .smooth;
+}
+
+
+p.f{
+	text-transform: uppercase;
+	@extend .opens;
+	letter-spacing: 0.2em;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.btn{
+  background: $blue;
+  color: $lime;
+  padding: 0.8em 3.6em;
+  border-radius: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+a.btn.r{
+    background: $lime;
+    color: $blue;
+}
+
+
+
+.page-content{
+  padding: 5em 0;
+}
+
+
+
+p.p1{
+  padding: 4em 0;
+  max-width: 60%;
+  margin: 0 auto;
+  line-height: 2.8em;
+  @include bp(L-phone){
+    max-width: 70%;
+  }
+}
+
+
+
+
+
+
+#home_1{
+  ul.inline{
+    text-align: center;
+    li{
+      text-align: center;
+      // padding: 1em;
+      // width: 25%;
+        h4{
+        }
+        p.f{
+          color: $red;
+          font-weight: bolder;
+        }
+        &:after{
+            content: "+";
+            font-size: 1em;
+            top: 6px;
+            position: relative;
+            padding-left: 0.4em;
+            // position: absolute;
+            font-size: 5em;
+            right: 0.2em;
+            display: none;
+        }
+        &:last-child:after{
+            display: none;
+        }
+    }
+    li.plus{
+      font-size: 4em;
+      padding: 0.5em;
+      position: relative;
+      top: -0.5em;
+      font-weight: 100;
+      @include bp(M-desktop){
+        padding: 0;
+      }
+    }
+    @include bp(L-phone){
+      li{
+        display: block !important;
+        &.plus{
+          margin-bottom: -0.5em;
+          margin-top: 0.5em;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+// #home_2{
+.home_2{
+  position: relative;
+  // height: 45vw;
+  @include gradient(rgba($light_blue, 0.6), #fff, 180deg);
+  .page-content{
+    // height: 100%;
+    // position: relative;
+  }
+  .page-bg{
+    // height: 100%;
+    background: url('../../img/bg_inspire.png');
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-position: center;
+  }
+  .this_content{
+    // @include centerer;
+    // left: 20%;
+  }
+  h2,p{
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+  h2{
+    padding-bottom: 0.8em;
+    color: $blue;
+    line-height: 1.1em;
+  }
+  p.p1{
+    padding-top: 0;
+    max-width: 40%;
+  }
+  &:after{
+    content: " ";
+    position: absolute;
+    background: $lime;
+    height: 2em;
+    width: 100%;
+    bottom: 0;
+    // z-index: 999;
+  }
+
+  @include bp(L-phone){
+    h2{
+      text-align: center !important;
+    }
+    p.p1{
+      max-width: 70%;
+      margin: 0 auto !important;
+    }
+    .this_content{text-align: center;}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home_3 {
+  p.didot{
+    text-align: center;
+    color: $blue;
+    font-size: 2.3em;
+    @extend .smooth;
+    font-weight: 200;
+    padding: 1em 4em;
+    &.one{}
+    &.two{
+      padding-bottom: 0;
+    }
+    &.three{
+      padding-top: 0;
+      font-size: 2em;
+    }
+  }
+
+  @include bp(L-phone){
+    p.didot{
+      padding: 1em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home_4, #home_5, #home_6 {
+  @include parrallax('https://everydaylisamae.files.wordpress.com/2015/02/running.jpg');
+  background-position: bottom;
+  .this_content{
+    max-width: 41em;
+    // margin-right: 0;
+    float: right;
+    h2{
+      text-align: left;
+      color: $orange;
+      font-size: 5.2em;
+      line-height: 1em;
+      padding-bottom: 0;
+    }
+    p.p1{
+      max-width: 100%;
+      padding-top: 0.5em;
+    }
+  }
+
+  @include bp(L-phone){
+    .this_content{
+      max-width: 90%;
+      h2{
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+
+#home_5 {
+  @include parrallax('../../img/water.jpeg');
+  overflow: hidden;
+  .page-bg{
+    background: rgba(0, 0, 0, 0.53);
+    overflow: hidden;
+  }
+  h2{
+    color: #fff !important;
+  }
+  p.p1{
+    color: #fff;
+  }
+  .this_content{
+    margin-top: 15vw;
+    max-width: 100%;
+    .inner{
+      max-width: 70%;
+      margin: 0 auto;
+      p{
+        @include bp(M-desktop){
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .b-img1 {
+      margin-bottom: -10px;
+      img{
+      }
+      p{
+        font-size: 3em;
+        line-height: 1.2em;
+        font-weight: 100;
+        color: #fff;
+        padding-left: 1em;
+      }
+  }
+  .page-content{
+    padding-bottom: 0;
+  }
+  @include bp(L-phone){
+    .this_content{
+      text-align: center;
+      margin-bottom: 4em;
+      p.p1{
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+#home_6 {
+  @include parrallax('../../img/lunch.jpeg');
+  background-position: bottom;
+  .page-bg{
+    background: rgba(255, 255, 255, 0.53);
+    overflow: hidden;
+  }
+  .this_content{
+    max-width: 45%;
+    float: left;
+    h2{
+      color: $dark !important;
+    }
+    p.p1{
+      color: $dark !important;
+    }
+  }
+  @include bp(L-phone){
+    .this_content{
+      text-align: center !important;
+      margin-bottom: 4em;
+      max-width: 90%;
+      float: none;
+      margin: 0 auto;
+      p.p1{
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.hyp{
+  padding: 8em;
+  p.didot{
+    text-align: center;
+    font-size: 2.4em;
+    padding-bottom: 0;
+    color: $blue;
+  }
+  @include bp(L-phone){
+    padding: 5em 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+a.to_top {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 5em;
+    opacity: 0.2;
+    padding: 50px;
+    padding-bottom: 0;
+    &:hover{
+      opacity: 0.8;
+    }
+}
+
+
+// footer
+#footer{
+  background: $dark;
+  color: #fff;
+  .logo a{
+    display: block;
+    border: 0;
+    // padding: 3em;
+  }
+  li{
+    a{
+      color: #fff;
+      padding-bottom: 0.4em;
+      display: block;
+      border: 0;
+      font-size: 0.9em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

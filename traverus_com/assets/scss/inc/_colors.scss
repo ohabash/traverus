@@ -1,0 +1,61 @@
+$lime: #CBEA13;
+$dark: #333;
+$darker: #333;
+$light: #ECECF0;
+$green: #209292;
+$yellow: #FFBB3B;
+$red: #A1512A;
+$white: #FFFFFF;
+$black: #000000;
+$blue: #1B1464;
+$purple: #460f54;
+$orange: #FF954C;
+$orange: #ed6c24;
+$light_blue: #f5f7fa;
+
+
+// basically repeat above
+$colors:
+	"lime" $lime,
+	"light_blue" $light_blue,
+	"dark" $dark,
+	"darker" $darker,
+	"light" $light,
+	"green" $green,
+	"yellow" $yellow,
+	"red" $red,
+	"white" $white,
+	"black" $black,
+	"blue" $blue,
+	"purple" $purple,
+	"orange" $orange
+;
+
+
+@each $color in $colors{
+	// .btn-color
+	.btn-#{nth($color, 1)}{
+	    background: nth($color, 2);
+	    color: #fff;
+	}
+	// .color / color
+	.#{nth($color, 1)}, #{nth($color, 1)}{
+	    color: nth($color, 2) !important;
+	    a{
+	        color: nth($color, 2);
+	    }
+	}
+	// .color-bg
+	.#{nth($color, 1)}-bg {
+		background: nth($color, 2);
+	}
+}
+
+
+
+
+
+
+
+
+
