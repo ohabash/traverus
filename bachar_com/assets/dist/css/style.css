@@ -2668,13 +2668,15 @@ hr {
   max-height: 100%;
   overflow: hidden; }
   #home section.home_2 .column .img {
-    background: url("http://i.huffpost.com/gen/1823961/images/o-JOGGING-facebook.jpg");
+    background: url("../../img/running.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-position-x: 0 !important;
+    background-position-x: -10em !important;
     height: 100%;
     width: 100%; }
     @media (max-width: 678px) {
@@ -2689,24 +2691,26 @@ section.layout-b {
   section.layout-b .lay-contain {
     height: 100%; }
     section.layout-b .lay-contain.sec_3_contain {
-      background: url("https://i0.wp.com/www.basketballismypassion.com/wp-content/uploads/2014/03/The-importance-of-Stretching.jpg?fit=2716%2C1810");
+      background: url("../../img/stretching.jpeg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
-      -o-background-size: cover; }
+      -o-background-size: cover;
+      background-position-x: 0 !important; }
       @media (max-width: 678px) {
         section.layout-b .lay-contain.sec_3_contain {
           background-position: center !important; } }
     section.layout-b .lay-contain.sec_5_contain {
-      background: url("https://cdn.spafinder.com/2015/08/25140712/The-Importance-of-Stretching.jpg");
+      background: url("../../img/towel.jpeg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
-      -o-background-size: cover; }
+      -o-background-size: cover;
+      background-position-x: 0 !important; }
       @media (max-width: 678px) {
         section.layout-b .lay-contain.sec_5_contain {
           background-position: center !important; } }

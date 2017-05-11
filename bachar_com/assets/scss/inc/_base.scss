@@ -197,7 +197,8 @@ hr {
       max-height: 100%;
       overflow: hidden;
       .img{
-        @include parrallax('http://i.huffpost.com/gen/1823961/images/o-JOGGING-facebook.jpg');
+        @include parrallax('../../img/running.jpg');
+        background-position-x: -10em !important;
         height: 100%;
         width: 100%;
       }
@@ -219,10 +220,10 @@ section.layout-b {
   .lay-contain{
     height: 100%;
     &.sec_3_contain{
-      @include parrallax('https://i0.wp.com/www.basketballismypassion.com/wp-content/uploads/2014/03/The-importance-of-Stretching.jpg?fit=2716%2C1810');
+      @include parrallax('../../img/stretching.jpeg');
     }
     &.sec_5_contain{
-      @include parrallax('https://cdn.spafinder.com/2015/08/25140712/The-Importance-of-Stretching.jpg');
+      @include parrallax('../../img/towel.jpeg');
     }
   }
     h2{

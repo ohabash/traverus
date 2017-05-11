@@ -54,6 +54,7 @@
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
+      background-position-x: 0 !important; 
         // background-position: top center !important;
         @include bp(L-phone){
           background-position: center !important;
