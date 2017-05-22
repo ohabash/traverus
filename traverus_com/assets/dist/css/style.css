@@ -2619,7 +2619,8 @@ a.btn {
   padding: 0.8em 3.6em;
   border-radius: 1.5em;
   font-weight: bold;
-  letter-spacing: 1.5px; }
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
 
 a.btn.r {
   background: #CBEA13;
@@ -5011,26 +5012,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .header .content-contain {
     width: 90%; }
     .header .content-contain a.logo_contain {
-      width: 50%;
+      width: 35%;
       display: block;
       margin-top: 15vh;
       margin-bottom: 3.5em; }
   .header .header-nav ul {
     text-align: left;
     margin-top: 2em; }
-    .header .header-nav ul li a {
-      font-weight: 900;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px; }
-    .header .header-nav ul li:after {
-      content: "\00B7";
-      font-size: 2.5em;
-      top: 6px;
-      position: relative;
-      padding-left: 0.4em; }
-    .header .header-nav ul li:last-child:after {
-      display: none; }
+    .header .header-nav ul li {
+      padding: 0; }
+      .header .header-nav ul li a {
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px; }
+      .header .header-nav ul li:after {
+        content: "\00B7";
+        font-size: 2.5em;
+        top: 6px;
+        position: relative;
+        padding-left: 0.2em; }
+      .header .header-nav ul li:last-child:after {
+        display: none; }
   @media (max-width: 678px) {
     .header .content-contain {
       width: 100%; }
