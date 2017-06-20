@@ -2589,7 +2589,8 @@ h2 {
   font-size: 4.3em;
   color: rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding-bottom: 1.2em; }
+  padding-bottom: 1.2em;
+  text-transform: capitalize; }
   @media (max-width: 678px) {
     h2 {
       font-size: 3.3em; } }
@@ -2870,6 +2871,22 @@ a.to_top {
     display: block;
     border: 0;
     font-size: 0.9em; }
+
+#team h2 {
+  color: #333 !important;
+  padding-bottom: 0.8em; }
+#team .teams-list .column {
+  padding: 0;
+  margin: 0;
+  background: #CBEA13; }
+  #team .teams-list .column.active img {
+    opacity: 0.7; }
+  #team .teams-list .column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+#team .tab-contents h2 {
+  padding-bottom: 0; }
 
 /*!
 Animate.css - http://daneden.me/animate
