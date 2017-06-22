@@ -496,7 +496,15 @@ a.to_top {
     .column{
       padding: 0;
       margin: 0;
-      background: $lime;
+      background: $yellow;
+      &[data-visible="false"]{display: none;}
+      &[data-flag="true"]{
+        // background: red;
+        img{
+          // opacity: 0.5;
+        }
+        
+      }
       &.active{
         img{
           opacity: 0.7;
@@ -510,7 +518,12 @@ a.to_top {
     }
   }
   .tab-contents{
-    h2{padding-bottom: 0;}
+    min-height: 23em;
+    h2{padding-bottom: 0;text-transform: uppercase}
+    p.text-center{
+      padding: 0 18em;
+      text-align: justify !important;
+    }
   }
 }
 

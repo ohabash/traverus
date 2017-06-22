@@ -138,8 +138,18 @@ hr {
           padding: 0.8em 1em;
           color: #fff;
           font-weight: 600;
-          font-size: 1.5em;
+          font-size: 1.9em;
+          text-transform: initial;
+          letter-spacing:0;
           @include ease(0.2s);
+          span{
+            font-size: 0.60em;
+            position: relative;
+            top: -0.25em;
+            &.two{
+              top: 0;
+            }
+          }
         }
         &#column_1 { 
           background: $orange;

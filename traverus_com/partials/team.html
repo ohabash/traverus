@@ -1,79 +1,58 @@
 <div class="p1em"></div>
 <h2>Meet the team</h2>
 
-<div class="columns teams-list">
-
-	<div class="column active" data-tab="1" data-title="Title 1" data-name="AL RODRIGUEZ">
-		<img src="assets/img/team/AL_RODRIGUEZ-min.jpg">
+<!-- googlesheets (ng-controller="teamCtrl")-->
+<!-- <div class="columns teams-list" ng-controller="teamCtrl">
+	<div class="column" data-flag="{{item.flag}}" data-visible="{{item.visible}}" ng-class='{active:$first}' ng-repeat="item in items" data-tab="1" data-title="{{item.title}}" data-name="{{item.name}}">
+		<img src="assets/img/team/{{item.img}}" title="{{item.img}}">
+		<p class="hide bio">{{item.bio}}</p>
 	</div>
+</div> -->
 
-	<div class="column" data-tab="1" data-title="Title 2" data-name="AMBER LYNN">
-		<img src="assets/img/team/AMBER_LYNN-min.jpg">
+<!-- contentful -->
+<div class="columns teams-list" contentful-entries="'content_type=staff'" ng-controller="teamContentful">
+	<div ng-repeat="item in $contentfulEntries.items" class="column" data-flag="{{item.fields.flag}}" data-visible="{{item.fields.visible}}" ng-class='{active:$first}' data-tab="1" data-title="{{item.fields.title}}" data-name="{{item.fields.name}}">
+		<!-- <h1>{{item[0].title}}</h1> -->
+		<img src="{{ item.fields.image.fields.file.url }}" title="{{item.img}}">
+		<p class="hide bio">{{item.fields.bio}}</p>
 	</div>
-
-	<div class="column" data-tab="1" data-title="Title 3" data-name="DAVID MANNING">
-		<img src="assets/img/team/DAVID_MANNING-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 4" data-name="JEFF YEO">
-		<img src="assets/img/team/JEFF_YEO-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 5" data-name="KAREN HIRSCH">
-		<img src="assets/img/team/KAREN_HIRSCH-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 6" data-name="LARRY CANTRELL">
-		<img src="assets/img/team/LARRY_CANTRELL-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 7" data-name="LORI SPEERS">
-		<img src="assets/img/team/LORI_SPEERS-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 8" data-name="NONAME">
-		<img src="assets/img/team/NONAME-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 9" data-name="PH1">
-		<img src="assets/img/team/PH1-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 10" data-name="SHAWN MANNING">
-		<img src="assets/img/team/SHAWN_MANNING-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 11" data-name="TROY DOOLY">
-		<img src="assets/img/team/TROY_DOOLY-min.jpg">
-	</div>
-
-	<div class="column" data-tab="1" data-title="Title 12" data-name="VICENTE FOX">
-		<img src="assets/img/team/VICENTE_FOX-min.jpg">
-	</div>
-
 </div>
+
+
+	
+
 <div class="p1em"></div>
-<div class="tab-contents">
+<div class="tab-contents container">
 	<div id="name"><h2></h2></div>
 	<div id="title"><p class="f"></p></div>
+	<div id="bio"><p class="text-center"></p></div>
 </div>
 <div class="p1em"></div>
 <div class="p1em"></div>
 
-<script type="text/javascript">
-$('.teams-list .column').mouseover( function(){
-	set_active_tab($(this))
-});
-set_active_tab($('.teams-list .column.active'))
 
-function set_active_tab(e){
-	e.siblings().removeClass('active');
-	e.addClass('active');
-	var name = e.data('name');
-	var title = e.data('title');
-	// console.log(name+"<===>"+title);
-	$('#name h2').text(name);
-	$('#title p.f').text(title);
-}
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

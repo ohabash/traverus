@@ -2223,6 +2223,9 @@ ul.inline {
   font-family: 'Nunito', 'Montserrat', 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300 !important; }
 
+.didot {
+  font-family: Didot, "Didot LT STD",'Spectral', "Hoefler Text", Garamond, "Times New Roman", serif !important; }
+
 .p0 {
   padding: 0 !important; }
 
@@ -2623,12 +2626,20 @@ hr {
       padding: 0.8em 1em;
       color: #fff;
       font-weight: 600;
-      font-size: 1.5em;
+      font-size: 1.9em;
+      text-transform: initial;
+      letter-spacing: 0;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       -o-transition: all 0.2s ease-in-out;
       -ms-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
+      #home section.home_1 .column .column-contain p.f span, #home section.home_1 .column .column-contain .header .header-menu span.header-item a span, .header .header-menu span.header-item #home section.home_1 .column .column-contain a span {
+        font-size: 0.60em;
+        position: relative;
+        top: -0.25em; }
+        #home section.home_1 .column .column-contain p.f span.two, #home section.home_1 .column .column-contain .header .header-menu span.header-item a span.two, .header .header-menu span.header-item #home section.home_1 .column .column-contain a span.two {
+          top: 0; }
     #home section.home_1 .column .column-contain#column_1 {
       background: #ed6c24;
       text-shadow: 1px 1px 1px #ed6c24; }
