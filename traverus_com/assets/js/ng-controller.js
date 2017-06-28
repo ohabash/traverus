@@ -53,7 +53,6 @@ app.controller('teamCtrl', function($scope, $timeout, $http) {
 // teamContentful
 app.controller('teamContentful', function($scope, $timeout, $http) {
 	$timeout(content_area, 1000);
-
 });
 
 // team content area logic
