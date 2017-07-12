@@ -69,6 +69,9 @@ h4{
   @extend .smooth;
 }
 
+.mw1{
+  max-width: 1em;
+}
 
 p.f{
 	text-transform: uppercase;
@@ -207,6 +210,7 @@ p.p1{
     padding-bottom: 0.8em;
     color: $blue;
     line-height: 1.1em;
+    max-width: 1em;
   }
   p.p1{
     padding-top: 0;
@@ -537,7 +541,37 @@ a.to_top {
 
 
 
-
+ul.languages {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 0.5em;
+  li{
+    &:first-child{
+      a:after{
+        content: '|';
+        padding-left: 0.5em;
+        margin-top: -3px;
+        color: #fff !important;
+        opacity: 0.6 !important;
+      }
+    }
+    a{
+      color: #fff;
+      @extend p.f;
+      opacity: 0.6;
+      &:hover{
+        opacity: 1;
+      }
+      &.active{
+        opacity: 1;
+        pointer-events: none;
+        color: $yellow;
+      }
+    }
+  }
+}
 
 
 

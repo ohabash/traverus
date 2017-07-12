@@ -2243,7 +2243,7 @@ ul.inline {
 .ChronicleDisplay-Roman, .font2 {
   font-family: 'ChronicleDisplay-Roman',"Big Caslon", "Book Antiqua", "Palatino Linotype",TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; }
 
-.opens, body, p.f {
+.opens, body, p.f, ul.languages li a {
   font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300; }
 
@@ -2606,7 +2606,10 @@ h4 {
   font-weight: 100;
   color: #209292; }
 
-p.f {
+.mw1 {
+  max-width: 1em; }
+
+p.f, ul.languages li a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: normal;
@@ -2643,7 +2646,7 @@ p.p1 {
   text-align: center; }
   #home_1 ul.inline li {
     text-align: center; }
-    #home_1 ul.inline li p.f {
+    #home_1 ul.inline li p.f, #home_1 ul.inline ul.languages li a, ul.languages #home_1 ul.inline li a {
       color: #A1512A;
       font-weight: bolder; }
     #home_1 ul.inline li:after {
@@ -2690,7 +2693,8 @@ p.p1 {
   .home_2 h2 {
     padding-bottom: 0.8em;
     color: #1B1464;
-    line-height: 1.1em; }
+    line-height: 1.1em;
+    max-width: 1em; }
   .home_2 p.p1 {
     padding-top: 0;
     max-width: 40%; }
@@ -2903,6 +2907,28 @@ a.to_top {
   #team .tab-contents p.text-center {
     padding: 0 18em;
     text-align: justify !important; }
+
+ul.languages {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 0.5em; }
+  ul.languages li:first-child a:after {
+    content: '|';
+    padding-left: 0.5em;
+    margin-top: -3px;
+    color: #fff !important;
+    opacity: 0.6 !important; }
+  ul.languages li a {
+    color: #fff;
+    opacity: 0.6; }
+    ul.languages li a:hover {
+      opacity: 1; }
+    ul.languages li a.active {
+      opacity: 1;
+      pointer-events: none;
+      color: #FFBB3B; }
 
 /*!
 Animate.css - http://daneden.me/animate

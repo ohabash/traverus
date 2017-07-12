@@ -1,17 +1,21 @@
 <div class="container">
 	<div class="content-contain">
+		<ul class="languages inline">
+			<li><a href="javascript:void(0)" id="en" ng-click="translate('en')">english</a></li>
+			<li><a href="javascript:void(0)" id="sp" ng-click="translate('sp')">spanish</a></li>
+		</ul>
 		<!-- logo -->
 		<a class="logo_contain tm">
 			<img src="assets/img/logo.svg" alt="" class="img-responsive">
 		</a>
-		<h3>Navigate. Accelerate. Celebrate</h3>
+		<h3>{{lang.slogan}}</h3>
 		<div class="header-nav">
 			<ul class="list-inline">
-				<li><a data_smooth href="#home_2">PERSONAL EMPOWERMENT</a></li>
-				<li><a data_smooth href="#home_4">HEALTH & WELLNESS</a></li>
-				<li><a data_smooth href="#home_5">TRAVEL & LEISURE</a></li>
-				<li><a data_smooth href="#home_6">Legacy</a></li>
-				<li><a data_smooth href="#team">Team</a></li>
+				<li><a data_smooth href="#home_2">{{lang.pe}}</a></li>
+				<li><a data_smooth href="#home_4">{{lang.h_and_w}}</a></li>
+				<li><a data_smooth href="#home_5">{{lang.t_and_l}}</a></li>
+				<li><a data_smooth href="#home_6">{{lang.legacy}}</a></li>
+				<li><a data_smooth href="#team">{{lang.team}}</a></li>
 			</ul>
 		</div>
 	</div>

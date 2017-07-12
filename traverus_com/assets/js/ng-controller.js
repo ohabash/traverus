@@ -17,7 +17,6 @@ app.controller('ListenController', function ($scope, $rootScope, $location) {
 
 // teams
 app.controller('teamCtrl', function($scope, $timeout, $http) {
-	
 	// get sheet
 	var token = "AIzaSyDQH70jXCG9FH2831ErEoJs7cppRLYQECo";
 	var sheet = "1pIpCiH8lGUXYKW-fLZ6rL_h2IrOoSzcEKn8om6Ba2c8";
@@ -45,9 +44,13 @@ app.controller('teamCtrl', function($scope, $timeout, $http) {
 		$timeout(content_area, 1000);
 	});
 	// content area update on hover
-
-
 });
+
+
+
+
+
+
 
 
 // teamContentful
