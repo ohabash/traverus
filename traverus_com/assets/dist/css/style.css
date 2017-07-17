@@ -2907,6 +2907,9 @@ a.to_top {
   #team .tab-contents p.text-center {
     padding: 0 18em;
     text-align: justify !important; }
+    @media (max-width: 678px) {
+      #team .tab-contents p.text-center {
+        padding: 1em; } }
 
 ul.languages {
   text-align: right;

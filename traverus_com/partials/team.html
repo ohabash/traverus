@@ -10,7 +10,7 @@
 </div> -->
 
 <!-- contentful -->
-<div class="columns teams-list" contentful-entries="'content_type=staff'" ng-controller="teamContentful">
+<div class="columns is-mobile teams-list" contentful-entries="'content_type=staff'" ng-controller="teamContentful">
 	<div ng-repeat="item in $contentfulEntries.items | orderBy:'fields.sort'" class="column" data-flag="{{item.fields.flag}}" data-visible="{{item.fields.visible}}" ng-class='{active:$first}' data-tab="1" data-title="{{item.fields.title}}" data-name="{{item.fields.name}}">
 		<!-- <h1>{{item[0].title}}</h1> -->
 		<img src="{{ item.fields.image.fields.file.url }}" title="{{item.img}}">

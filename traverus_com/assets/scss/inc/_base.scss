@@ -535,6 +535,9 @@ a.to_top {
     p.text-center{
       padding: 0 18em;
       text-align: justify !important;
+      @include bp(L-phone){
+        padding: 1em;
+      }
     }
   }
 }
