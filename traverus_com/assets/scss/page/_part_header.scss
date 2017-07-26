@@ -39,6 +39,7 @@
         }
     }
     @include bp(L-phone){
+        background-position: 68% !important;
         .content-contain{
             width: 100%;
             a.logo_contain{

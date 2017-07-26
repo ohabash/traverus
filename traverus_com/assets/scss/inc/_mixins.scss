@@ -57,7 +57,9 @@
              background-position-x: 0 !important;
         // background-position: top center !important;
         @include bp(L-phone){
-          background-position: center !important;
+              background-position: right !important;
+              background-size: cover;
+              background-attachment: inherit;
         }
 }
 

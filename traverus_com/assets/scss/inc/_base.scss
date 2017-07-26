@@ -48,7 +48,7 @@ h2{
   text-transform: capitalize;
   @extend .didot;
   @include bp(L-phone){
-    font-size: 3.3em;
+    font-size: 2.9em;
   }
 }
 
@@ -322,10 +322,11 @@ p.p1{
   }
 
   @include bp(L-phone){
+    background-position: left !important;
     .this_content{
       max-width: 90%;
       h2{
-        font-size: 4em;
+        font-size: 3em;
       }
     }
   }
@@ -501,6 +502,7 @@ a.to_top {
       padding: 0;
       margin: 0;
       background: $yellow;
+      height: 12em;
       &[data-visible="false"]{display: none;}
       &[data-flag="true"]{
         // background: red;
